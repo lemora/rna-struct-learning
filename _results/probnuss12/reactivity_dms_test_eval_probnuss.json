@@ -1,0 +1,7 @@
+{
+    "test_data_path": "data/DMS/TEST/data.csv",
+    "files_evaluated": 20822,
+    "predictor": "probnuss",
+    "avg_mse": 0.1709,
+    "avg_corr": 0.4628
+}

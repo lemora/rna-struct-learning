@@ -1,0 +1,7 @@
+{
+    "test_data_path": "data/2A3_norm/TEST/data.csv",
+    "files_evaluated": 19349,
+    "predictor": "eternafold",
+    "avg_mse": 0.2516,
+    "avg_corr": 0.5726
+}

@@ -1,0 +1,11 @@
+{
+    "files_evaluated": 3460,
+    "predictor": "baseline_fullstem",
+    "avg_pair_precision": 0.018,
+    "avg_pair_recall": 0.03,
+    "avg_pair_f1": 0.022,
+    "avg_base_sensitivity": 0.964,
+    "avg_base_specificity": 0.028,
+    "avg_base_accuracy": 0.548,
+    "avg_base_balanced_accuracy": 0.495
+}

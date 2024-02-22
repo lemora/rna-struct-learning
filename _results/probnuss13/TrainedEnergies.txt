@@ -1,0 +1,10 @@
+base_pair_AA -3.6213
+base_pair_AC -3.66056
+base_pair_AG -3.33979
+base_pair_AU -3.34223
+base_pair_CC -3.98662
+base_pair_CG 1.20289
+base_pair_CU -3.54338
+base_pair_GG -3.70647
+base_pair_GU -3.34115
+base_pair_UU -2.52121

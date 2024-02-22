@@ -1,0 +1,7 @@
+{
+    "test_data_path": "data/2A3/TEST/data.csv",
+    "files_evaluated": 19349,
+    "predictor": "viennarna",
+    "avg_mse": 0.3664,
+    "avg_corr": 0.6089
+}

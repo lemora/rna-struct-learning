@@ -1,0 +1,11 @@
+{
+    "files_evaluated": 3460,
+    "predictor": "eternafold",
+    "avg_pair_precision": 0.535,
+    "avg_pair_recall": 0.594,
+    "avg_pair_f1": 0.561,
+    "avg_base_sensitivity": 0.848,
+    "avg_base_specificity": 0.677,
+    "avg_base_accuracy": 0.771,
+    "avg_base_balanced_accuracy": 0.763
+}

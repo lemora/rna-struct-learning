@@ -1,0 +1,7 @@
+{
+    "test_data_path": "data/DMS/TEST/data.csv",
+    "files_evaluated": 20822,
+    "predictor": "eternafold",
+    "avg_mse": 0.2075,
+    "avg_corr": 0.6407
+}

@@ -1,0 +1,11 @@
+{
+    "files_evaluated": 3460,
+    "predictor": "viennarna",
+    "avg_pair_precision": 0.536,
+    "avg_pair_recall": 0.574,
+    "avg_pair_f1": 0.552,
+    "avg_base_sensitivity": 0.826,
+    "avg_base_specificity": 0.697,
+    "avg_base_accuracy": 0.767,
+    "avg_base_balanced_accuracy": 0.762
+}

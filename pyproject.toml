@@ -1,0 +1,63 @@
+[project]
+name = "rna-struct-learning"
+version = "0.1.0"
+description = "Learn RNA secondary structure folding parameters from chemical probing data"
+authors = [{ name = "lemora", email = "blah@blubb.com" }]
+requires-python = ">= 3.10"
+
+[platforms.default]
+python = ">=3.10"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pixi.project]
+channels = ["conda-forge", "bioconda", "pypi"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+rna-struct-learning = { path = ".", editable = true }
+draw-rna = { git = "https://github.com/lemora/draw_rna.git", rev = "a768998ecf99e721b61b226955e62469023a64b0" }
+
+[tool.pixi.tasks]
+jlab = "jupyter lab"
+jlab-headless = "jupyter lab --no-browser --port=8889 --ip=0.0.0.0"
+mmseqs = "mmseqs"
+predict = "python src/rnasl/main_predict.py"
+train = "python src/rnasl/main_train.py"
+evaluate = "python src/rnasl/main_eval.py"
+visualize = "sh ./src/rnasl/visualization/secstruct-to-image.sh"
+test = "pytest"
+
+#[tool.pixi.tasks.enable-jax-gpu]
+#cmd = """
+#python -m pip uninstall -y jax jaxlib && \
+#python -m pip install --upgrade 'jax[cuda12_local]' -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+#"""
+
+[tool.pixi.dependencies]
+python = ">=3.10"
+matplotlib = ">=3.10.3,<4"
+mmseqs2 = ">=17.b804f,<18"
+pandas = ">=2.3.0,<3"
+ipykernel = ">=6.29.5,<7"
+jupyterlab = ">=4.4.4,<5"
+pixi-kernel = ">=0.6.4,<0.7"
+polars = ">=1.31.0,<2"
+rapidfuzz = ">=3.13.0,<4"
+scipy = ">=1.16.0,<2"
+fastcluster = ">=1.3.0,<2"
+seaborn = ">=0.13.2,<0.14"
+pyarrow = ">=20.0.0,<21"
+nltk = ">=3.9.1,<4"
+py3dmol = ">=2.5.1,<3"
+scikit-learn = ">=1.7.0,<2"
+hvplot = ">=0.11.3,<0.12"
+pytest = ">=8.4.1,<9"
+jax = ">=0.6.0,<0.7"
+jaxlib = ">=0.6.0,<0.7"
+optax = ">=0.2.4,<0.3"
+datasets = ">=3.6.0,<4"
+viennarna = ">=2.4.7,<3"
+pip = ">=25.1.1,<26"

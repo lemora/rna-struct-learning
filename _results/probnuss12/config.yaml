@@ -1,0 +1,22 @@
+train_file: ../data/DMS_norm/TRAIN/data.csv
+val_file: ../data/DMS_norm/VALIDATION/data.csv
+loss_config:
+  l2_reg: 0.0001
+  entropy_weight: 0.0
+  mag_weight: 0.0
+  clip_target: false
+  downweight_clipped: 1.0
+  noncanon_weight: 0.0
+  canon_weight: 0.0
+  canon_usage_weight: 0.0
+  helix_weight: 0.0
+  eps: 1.0e-06
+train_config:
+  freeze_nc: false
+  h: 3
+  lr: 0.01
+  steps: 7000
+  examples_per_step: 40
+  val_examples_per_step: 40
+  patience_warmup: 30
+  patience: 50

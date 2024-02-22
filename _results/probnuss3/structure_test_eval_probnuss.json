@@ -1,0 +1,11 @@
+{
+    "files_evaluated": 3460,
+    "predictor": "probnuss",
+    "avg_pair_precision": 0.057,
+    "avg_pair_recall": 0.04,
+    "avg_pair_f1": 0.044,
+    "avg_base_sensitivity": 0.357,
+    "avg_base_specificity": 0.62,
+    "avg_base_accuracy": 0.471,
+    "avg_base_balanced_accuracy": 0.489
+}

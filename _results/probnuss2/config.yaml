@@ -1,0 +1,23 @@
+train_file: ../data/2A3_norm/TRAIN/data.csv
+val_file: ../data/2A3_norm/VALIDATION/data.csv
+loss_config:
+  l2_reg: 0.01
+  entropy_weight: 0.0
+  mag_weight: 0.0
+  clip_target: false
+  downweight_clipped: 1.0
+  noncanon_weight: 1.0
+  canon_weight: 1.0
+  canon_usage_weight: 1.0
+  helix_weight: 0.0
+  eps: 1.0e-06
+train_config:
+  freeze_nc: false
+  loop_pen: false
+  h: 3
+  lr: 0.01
+  steps: 7000
+  examples_per_step: 20
+  val_examples_per_step: 20
+  patience_warmup: 30
+  patience: 50

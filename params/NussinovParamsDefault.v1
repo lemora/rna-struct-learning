@@ -1,0 +1,10 @@
+base_pair_AA 5
+base_pair_AC 5
+base_pair_AG 5
+base_pair_AU -2.0
+base_pair_CC 5
+base_pair_CG -3.0
+base_pair_CU 5
+base_pair_GG 5
+base_pair_GU -1.0
+base_pair_UU 5

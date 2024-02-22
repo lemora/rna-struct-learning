@@ -1,0 +1,23 @@
+train_file: data/DUMMY/data.csv
+val_file: data/DUMMY/data.csv
+loss_config:
+  l2_reg: 0.01
+  entropy_weight: 0.0
+  mag_weight: 0.0
+  clip_target: false
+  downweight_clipped: 1.0
+  noncanon_weight: 0.0
+  canon_weight: 0.0
+  canon_usage_weight: 0.0
+  helix_weight: 0.0
+  eps: 1.0e-06
+train_config:
+  freeze_nc: false
+  loop_pen: false
+  h: 4
+  lr: 0.05
+  steps: 6000
+  examples_per_step: 1
+  val_examples_per_step: 1
+  patience_warmup: 5
+  patience: 5

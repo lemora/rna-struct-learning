@@ -134,7 +134,7 @@ def evaluate_reactivity_predictions(
         predictor_path: str | None = None):
     print(f"Evaluating predictor {predictor} on the reactivity test set.")
 
-    energy_mat = None
+    energy_mat = mat = np.zeros((4, 4), dtype=float)
     if energy_mat_path is not None:
         energy_mat = energy_mat_from_file(energy_mat_path)
         energy_mat = jnp.array(energy_mat)

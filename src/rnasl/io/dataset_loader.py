@@ -78,7 +78,7 @@ def load_structure_dataset_eterna(struct_dir: str, max_count=None) -> list[tuple
                 print(f"Skipping {filepath}: crossing pairs detected.")
                 continue
 
-            encoded_seq = encode_seq_jax(seq)
+            encoded_seq = encode_seq_jax("".join(seq))
             dataset.append((encoded_seq, base_pairs))
             total_loaded += 1
 

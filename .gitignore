@@ -177,3 +177,4 @@ data/
 struct.dbn
 *.dbn
 params/EternaFoldParams_PLUS_POTENTIALS.v1
+out/*

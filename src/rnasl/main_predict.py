@@ -10,7 +10,6 @@ from rnasl.utils.helper import ensure_rna_bases, isXNA
 import rnasl.folding.nussinov_mfe as nussmfe
 import rnasl.folding.nussinov_pf as nusspf
 import rnasl.folding.nussinov_pf_jax as nusspfx
-import rnasl.folding.nussinov_bpps as nussbpps
 import rnasl.folding.pcfg_nltk as pcfg_nltk
 from rnasl.folding_primitives.pairing_energies import PairingEnergies
 from rnasl.io.experiment_io import energy_mat_from_file, read_in_seq, write_rna_struct_to_file

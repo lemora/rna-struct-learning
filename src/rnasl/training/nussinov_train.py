@@ -361,17 +361,6 @@ class RNATrainer:
         self.optimizer = optax.adam(trainconf.lr)
         self.opt_state = self.optimizer.init(self.energies)
 
-    def evaluate_loss(self, data_stream, max_examples=10):
-        total_loss = 0.0
-        count = 0
-        for seq, target in data_stream:
-            loss = compute_loss(self.energies, seq, target, self.semiring, self.trainconf.h, self.lossconf)
-            total_loss += loss
-            count += 1
-            if count >= max_examples:
-                break
-        return total_loss / count if count > 0 else jnp.nan
-
     def train(self):
         loss_keys = ["total", "mse", "l2", "entropy", "mag", "canon", "noncanon", "canon_usage", "helix"]
         train_logs = {k: [] for k in loss_keys}

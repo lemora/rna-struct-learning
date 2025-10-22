@@ -14,23 +14,19 @@ import rnasl.folding.pcfg_nltk as pcfg_nltk
 from rnasl.folding_primitives.pairing_energies import PairingEnergies
 from rnasl.io.experiment_io import energy_mat_from_file, read_in_seq, write_rna_struct_to_file
 
-DEFAULT_RNA = "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA"  # E. coli tRNA
-
 
 def parse_command_line(argv) -> argparse.ArgumentParser:
     """Process command line arguments."""
     p = argparse.ArgumentParser()
-    p.add_argument('-v', '--verbose', action='store_true', default=False, help='enable verbose mode')
+    p.add_argument('-v', '--verbose', action='store_true', default=False, help='Enable verbose mode.')
     p.add_argument('-d', '--display', action='store_true', default=False,
-                   help='display the visualized intermediate results')
+                   help='Display the visualized intermediate results.')
 
     p.add_argument('-s', '--seq', type=str, required=True,
                    help='The RNA to predict a structure for (accepts *.seq, *.dbn or string)')
     p.add_argument('-a', '--alg', type=str, default="nuss_pfx", choices=["pcfg", "nuss_mfe", "nuss_pf", "nuss_pfx"],
-                   help="The algorithm to use for MFE structure prediction.")
-    p.add_argument('-m', '--mode', type=str, default="mfe", choices=["mfe", "ensemble"],
-                   help="The type of prediction to make.")
-    p.add_argument('-p', '--params', type=str, help="Which prameters to use for the prediction.")
+                   help="The algorithm to use for structure prediction. Default: Jax-based McCaskill-Nussinov (nuss_pfx) MEA structure.")
+    p.add_argument('-p', '--params', type=str, help="Which parameters to use for the prediction. Expects a yaml file.")
     p.add_argument('-t', '--temp', type=float, default=gc.TEMP, help='Temperature in kelvin.')
     p.add_argument('-l', type=int, default=3, help='Minimum loop length.')
     p.add_argument('-o', '--out', type=str, help='The filename to write the predicted structure into.')
@@ -84,8 +80,6 @@ def run():
     elif args.alg == "nuss_pfx":
         print("Running partition function nussinov on jax")
         vienna_struct = nusspfx.predict_structure(rna_seq, energy_mat, args.l, dirpath)
-        # nussbpps.compare_np_jax(rna_seq, energy_mat, args.l)
-        # return
 
     print(f"\n-- Predicted structure:\n{rna_seq}\n{vienna_struct}\n")
     outname = args.out if args.out else "struct.dbn"

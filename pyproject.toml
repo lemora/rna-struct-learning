@@ -12,7 +12,7 @@ python = ">=3.10"
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.pixi.project]
+[tool.pixi.workspace]
 channels = ["conda-forge", "bioconda", "pypi"]
 platforms = ["linux-64"]
 

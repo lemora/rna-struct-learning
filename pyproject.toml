@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Learn RNA secondary structure folding parameters from chemical probing data"
 authors = [{ name = "lemora", email = "blah@blubb.com" }]
 requires-python = ">= 3.10"
+dependencies = ["viennarna>=2.7.0,<3"]
 
 [platforms.default]
 python = ">=3.10"
@@ -59,5 +60,4 @@ jax = ">=0.6.0,<0.7"
 jaxlib = ">=0.6.0,<0.7"
 optax = ">=0.2.4,<0.3"
 datasets = ">=3.6.0,<4"
-viennarna = ">=2.4.7,<3"
 pip = ">=25.1.1,<26"

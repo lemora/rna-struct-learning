@@ -9,14 +9,27 @@ Requirements
 ---
 
 - python >= 3.10
-- the `pixi` package manager and workflow tool:
-  - Show all runnable tasks: `pixi task list`
-  - Run prediction: `pixi run predict --seq GGGAUUACCCC -p params/NussinovParamsDefault.v1`
+- the `pixi` package manager and workflow tool
 
-`pixi` Tasks
+Usage
 ---
 
-All functionality can be accessed through the predefined tasks:
+- Show all runnable tasks:
+
+    `pixi task list`
+
+- Run prediction:
+
+    `pixi run predict --seq GGGAUUACCCC -p params/NussinovParamsDefault.v1`
+
+- Run example training on dummy dataset:
+
+    `pixi run train data/DUMMY/data.csv --validate data/DUMMY/data.csv --outdir "out/training/ex01" --config params/config_example.yaml`
+
+Tasks
+---
+
+All functionality can be accessed through the predefined tasks (`pixi run ...`):
 
 | Task           | Command                                                          |
 |----------------|------------------------------------------------------------------|

@@ -19,7 +19,6 @@ platforms = ["linux-64"]
 
 [tool.pixi.pypi-dependencies]
 rna-struct-learning = { path = ".", editable = true }
-draw-rna = { git = "https://github.com/lemora/draw_rna.git", rev = "a768998ecf99e721b61b226955e62469023a64b0" }
 
 [tool.pixi.tasks]
 jlab = "jupyter lab"
